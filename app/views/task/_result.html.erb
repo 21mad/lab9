@@ -1,0 +1,13 @@
+<div id='result-container'>
+<h1>Результат</h1>
+<p id="count">Количество отрезков: <%= @count %></p>
+<p id="max_seg">Самый длинный отрезок: <%= @max_seg %></p>
+<table id ="segments" style="border: 1px solid black">
+<tr><th>Длина</th><th>Отрезок</th></tr>
+<% @segments.each do |seg| %>
+    <tr><td><%= seg[:length] %></td><td><%= seg[:segment] %></td></tr>
+<%end%>
+<table>
+
+<%= link_to 'Очистить', root_path%>
+</div>
